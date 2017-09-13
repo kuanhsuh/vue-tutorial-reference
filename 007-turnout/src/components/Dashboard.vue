@@ -7,12 +7,11 @@
     <hr>
     <div class="col-md-12">
       <EventItem
-        v-for="(event_item, index) in this.$store.state.event"
+        v-for="(event_item, index) in this.$store.state.events"
         :event="event_item"
         key="index"
         />
     </div>
-    {{$store.state.events}}
   </div>
 </template>
 

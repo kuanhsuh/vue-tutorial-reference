@@ -4,22 +4,22 @@
     <div class="form" v-if="showForm">
       <div class="form-group">
         <label>Title</label>
-        <input type="text" class="form-control" v-model="events.title">
+        <input type="text" class="form-control" v-model="event.title">
       </div>
 
       <div class="form-group">
         <label>Description</label>
-        <input type="text" class="form-control" v-model="events.description">
+        <input type="text" class="form-control" v-model="event.description">
       </div>
 
       <div class="form-group">
         <label>Date</label>
-        <input type="date" class="form-control" v-model="events.date">
+        <input type="date" class="form-control" v-model="event.date">
       </div>
 
       <div class="form-group">
         <label>Location</label>
-        <input type="text" class="form-control" v-model="events.location">
+        <input type="text" class="form-control" v-model="event.location">
       </div>
       <button
         class="btn-sm btn-primary"
@@ -34,11 +34,12 @@
 </template>
 
 <script>
-import { eventsRef } from '../firebaseApp'
+import { eventsRef } from '../firebaseApp.js'
+
 export default {
   data () {
     return {
-      events: {
+      event: {
         title: '',
         description: '',
         date: '',
@@ -50,7 +51,7 @@ export default {
   },
   methods: {
     addEvent() {
-      this.events.email = this.$store.state.user.email;
+      this.event.email = this.$store.state.user.email;
       eventsRef.push(this.event)
     }
   }

@@ -28,9 +28,12 @@ firebaseApp.auth().onAuthStateChanged(user => {
   }
 })
 
-new Vue({
+const vm = new Vue({
   el: '#app',
   store,
   router,
   render: h => h(App)
 })
+
+window['vue'] = vm
+window['store'] = store

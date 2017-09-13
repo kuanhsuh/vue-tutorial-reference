@@ -2,13 +2,13 @@
   <div class="form-inline">
     <h3>Sign Up</h3>
     <div class="form-group">
-      <input 
+      <input
         type="text"
         placeholder="email"
         class="form-control"
         v-model="email"
         />
-      <input 
+      <input
         type="password"
         placeholder="password"
         class="form-control"
