@@ -19,3 +19,5 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 
 63. Submitting Events
+
+torpid-toy.surge.sh
